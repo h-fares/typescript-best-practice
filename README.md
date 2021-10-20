@@ -59,3 +59,18 @@ let testNumArray: number[number, number] = [1, 2]
 testNumArray = [1, 2, 3] // error
 ```
 
+## 5. Use type aliases in repetitive data types
+If there is objects with the same types of data structure, define these types of data structure as one new Type
+
+Example: we have two objects:
+```javascript
+const audi: {topSpeed: number, ps: number} = {topSpeed: 220, ps: 150}
+const vw: {topSpeed: number, ps: number} = {topSpeed: 200, ps: 125}
+```
+Better way to write that code is to define a new CarDetails Type:
+```javascript
+type CarDetails = {topSpeed: number, ps: number}
+const audi: CarDetails = {topSpeed: 220, ps: 150}
+const vw: CarDetails = {topSpeed: 200, ps: 125}
+```
+
