@@ -101,9 +101,9 @@ There is too many ways to log infos in console.
 
 Try to use them
 ```javascript
-const obj1 = {key11: value11, key21: value21, key31: value31}
-const obj2 = {key12: value12, key22: value22, key32: value32}
-const obj3 = {key13: value13, key23: value23, key33: value33}
+const obj1 = {key1: value11, key2: value21, key3: value31}
+const obj2 = {key1: value12, key2: value22, key3: value32}
+const obj3 = {key1: value13, key2: value23, key3: value33}
 ```
 To log them as Array of objects
 ```javascript
@@ -146,3 +146,24 @@ function getCarDetails({name, speed}){
 }
 const carDetails = getCarDetails(car)  
 ```
+
+## 4. Spread syntax
+### With objects
+The best way to merge two objects with each other:
+```javascript
+const obj1 = {
+    key11: value11,
+    key21: value12
+}
+const obj2 = {
+    key32: value31,
+}
+const mergedObject = {...obj1, ...obj2}
+```
+### With arrays
+```javascript
+const array = [1, 2, 3]
+const array2 = [...array, 4, 5, 6]
+```
+
+[Resources](https://github.com/codediodeio/code-this-not-that-js/blob/master/spread-syntax.js)
