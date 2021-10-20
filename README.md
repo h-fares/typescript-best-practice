@@ -74,3 +74,22 @@ const audi: CarDetails = {topSpeed: 220, ps: 150}
 const vw: CarDetails = {topSpeed: 200, ps: 125}
 ```
 
+# JavaScript tips in general
+
+## 1. Avoid "await" inside loops
+Try not to use await inside a loop
+
+#### Bad
+```javascript
+for (const element of elements) {
+    await this.dummyFunction(element)
+}
+```
+#### Good
+```javascript
+const promisesArray = []
+for (const element of elements) {
+    promisesArray.push(this.dummyFunction(element))
+}
+await Promise.all(promisesArray)
+```
