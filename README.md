@@ -46,3 +46,16 @@ const age = 30
 const age = 31 // error, age cannot be updated
 ```
 
+## 3. Use tuples for fixed length arrays
+In certian setuations you have to define an array with constant length. The problem here is: there is no way to give a length for an array
+```javascrpt
+const testNumArray: number[] = [5] // 5 here will we define as first element => testNumArray[1] = 5
+```
+To avoid this problem so you can pass more than enough data to your array, use Tuples
+
+For example: you want to define an array with just two elements
+```javascript
+let testNumArray: number[number, number] = [1, 2]
+testNumArray = [1, 2, 3] // error
+```
+
