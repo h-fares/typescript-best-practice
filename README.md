@@ -73,6 +73,8 @@ type CarDetails = {topSpeed: number, ps: number}
 const audi: CarDetails = {topSpeed: 220, ps: 150}
 const vw: CarDetails = {topSpeed: 200, ps: 125}
 ```
+[Resources](https://medium.com/@warkiringoda/typescript-best-practices-2021-a58aee199661)
+
 
 # JavaScript tips in general
 
@@ -92,4 +94,27 @@ for (const element of elements) {
     promisesArray.push(this.dummyFunction(element))
 }
 await Promise.all(promisesArray)
+```
+
+## 2. Logging
+There is too many ways to log infos in console.
+
+Try to use them
+```javascript
+const obj1 = {key11: value11, key21: value21, key31: value31}
+const obj2 = {key12: value12, key22: value22, key32: value32}
+const obj3 = {key13: value13, key23: value23, key33: value33}
+```
+To log them as Array of objects
+```javascript
+console.log({obj1, obj2, obj3})
+```
+To log them as table
+```javascript
+console.table([obj1, obj2, obj3])
+```
+To log them in css styles
+```javascript
+console.log('%c Objects: ', 'color: red; font-weight: bold;')
+console.log({obj1, obj2, obj3})
 ```
