@@ -124,7 +124,7 @@ If you have a function that takes an object as parameter, but just some of its p
 #### Bad
 ```javascript
 const car = {
-   name: audi,
+   name: "audi",
    speed: 220,
    ps: 150
 }
@@ -137,7 +137,7 @@ const carDetails = getCarDetails(car)
 #### Good
 ```javascript
 const car = {
-   name: audi,
+   name: "audi",
    speed: 220,
    ps: 150
 }
