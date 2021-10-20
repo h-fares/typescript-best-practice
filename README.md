@@ -118,3 +118,31 @@ To log them in css styles
 console.log('%c Objects: ', 'color: red; font-weight: bold;')
 console.log({obj1, obj2, obj3})
 ```
+
+## 3. Destructuring
+If you have a function that takes an object as parameter, but just some of its parameters will be uesed in the function.
+#### Bad
+```javascript
+const car = {
+   name: audi,
+   speed: 220,
+   ps: 150
+}
+function getCarDetails(carObject){
+    return `This is ${carObject.name}, and its top speed is ${carObject.speed}`
+}
+const carDetails = getCarDetails(car)  
+```
+
+#### Good
+```javascript
+const car = {
+   name: audi,
+   speed: 220,
+   ps: 150
+}
+function getCarDetails({name, speed}){
+    return `This is ${name}, and its top speed is ${speed}`
+}
+const carDetails = getCarDetails(car)  
+```
